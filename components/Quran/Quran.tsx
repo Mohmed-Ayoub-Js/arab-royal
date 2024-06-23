@@ -13,8 +13,13 @@ const Quran = ({ videoId }: QuranProps) => {
     const { toast } = useToast();
 
     useEffect(() => {
-        setAudio(new Audio(videoId));
+        // Check if window is defined to ensure we're on the client-side
+        if (typeof window !== 'undefined') {
+            setAudio(new Audio(videoId));
+        }
+
         return () => {
+            // Clean up audio on component unmount
             if (audio) {
                 audio.pause();
                 audio.src = '';
@@ -50,3 +55,4 @@ const Quran = ({ videoId }: QuranProps) => {
 };
 
 export default Quran;
+
