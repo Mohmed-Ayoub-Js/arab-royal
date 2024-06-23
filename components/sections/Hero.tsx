@@ -52,7 +52,7 @@ export default function HeroAppliction() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <DiscordButton title='الانضمام الى السيرفر'/>
               <div className="text-sm font-semibold leading-6 text-gray-100">
-                <Quran videoId='./quran1.mp3'/>
+                <Quran vedioId='./quran1.mp3'/>
               </div>
             </div>
           </div>

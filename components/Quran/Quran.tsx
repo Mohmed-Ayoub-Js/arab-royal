@@ -1,33 +1,20 @@
 "use client";
 import { useToast } from "@/components/ui/use-toast";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from '../ui/button';
 
 interface QuranProps {
-    videoId: string;
+    vedioId: string;
 }
 
-const Quran = ({ videoId }: QuranProps) => {
+const Quran = ({ vedioId }: QuranProps) => {
     const [audioPlaying, setAudioPlaying] = useState(false);
-    const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
     const { toast } = useToast();
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setAudio(new Audio(videoId));
-        }
-
-        return () => {
-            if (audio) {
-                audio.pause();
-                audio.src = '';
-            }
-        };
-    }, [videoId]);
+    let audio: HTMLAudioElement | null = null;
 
     const playAudio = () => {
         if (audio) {
-            if (!audioPlaying) {
+            if (audio.paused) {
                 audio.play();
                 toast({
                     description: "تم تشغيل القرآن الكريم بصوت القارئ أحمد حمادي بدون مؤثرات",
@@ -45,6 +32,7 @@ const Quran = ({ videoId }: QuranProps) => {
 
     return (
         <div>
+            <audio ref={(element) => { audio = element; }} src={vedioId} />
             <Button onClick={playAudio}>
                 {audioPlaying ? 'إيقاف الصوت' : 'تشغيل الصوت'}
             </Button>
