@@ -13,8 +13,10 @@ import { usePathname } from 'next/navigation'
 
 const MenuNavigation = () => {
     const route = useRouter();
+    const origin = window.location.origin;
     const currentPath = usePathname();
-    const origin = typeof window !== 'undefined' ? window.location.origin : '';
+    console.log(currentPath);
+    
 
     return (
         <div>

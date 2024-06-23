@@ -53,5 +53,3 @@ const Quran = ({ videoId }: QuranProps) => {
 };
 
 export default Quran;
-
-
