@@ -7,7 +7,7 @@ import {
 
 const Quesitions = () => {
   return (
-    <div className=" p-10 flex items-center flex-col w-full">
+    <div className=" p-10 mt-10 md:mt-0 flex items-center flex-col w-full">
         <h1 className=" text-5xl font-extrabold">
             الاسألة الشائعة
         </h1>

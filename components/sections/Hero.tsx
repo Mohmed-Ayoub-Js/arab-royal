@@ -5,15 +5,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import DiscordButton from '../global/DiscordButton';
 import Quran from '../Quran/Quran';
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-]
 
 export default function HeroAppliction() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <div className="bg-black">
@@ -21,7 +14,7 @@ export default function HeroAppliction() {
 
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
-          className="absolute inset-x-0 top-40 z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          className="absolute inset-x-0 top-40 z-50 hidden md:block transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
         >
           <div
