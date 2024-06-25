@@ -13,7 +13,6 @@ import { usePathname } from 'next/navigation'
 
 const MenuNavigation = () => {
     const route = useRouter();
-    const origin = window.location.origin;
     const currentPath = usePathname();
     console.log(currentPath);
     
