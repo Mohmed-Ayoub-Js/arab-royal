@@ -13,15 +13,15 @@ const Quesitions = () => {
         </h1>
 <Accordion type="single" collapsible className=" w-full">
   <AccordionItem value="item-1">
-    <AccordionTrigger>السؤال الاول</AccordionTrigger>
+    <AccordionTrigger>متى ينفتح التقديم؟</AccordionTrigger>
     <AccordionContent>
-     جواب
+    التقديم مفتوح حاليا انضم وقدم لدخول ادارة خادمنا
     </AccordionContent>
   </AccordionItem>
   <AccordionItem value="item-2">
-    <AccordionTrigger>السؤال الثاني</AccordionTrigger>
+    <AccordionTrigger>هل توجد جوائز ل الي يدعم السيرفر ب بوست؟</AccordionTrigger>
     <AccordionContent>
-      جواب
+    نعم ! جوائز ورتب خياليه مثل رتبة بوستر و داعم للسيرفر باوامر خاصه ادخل وادعم واستكشف 
     </AccordionContent>
   </AccordionItem>
 </Accordion>

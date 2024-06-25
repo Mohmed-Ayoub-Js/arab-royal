@@ -11,7 +11,6 @@ const Quran = ({ vedioId }: QuranProps) => {
     const [audioPlaying, setAudioPlaying] = useState(false);
     const { toast } = useToast();
     let audio: HTMLAudioElement | null = null;
-
     const playAudio = () => {
         if (audio) {
             if (audio.paused) {

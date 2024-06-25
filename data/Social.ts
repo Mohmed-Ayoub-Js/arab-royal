@@ -6,7 +6,7 @@ export const social = [
     },
     {
         title:'tik tok',
-        route:'https://www.guilded.gg/ArabRoyal/groups/397NpqZd/channels/a1f32b8f-4184-4f09-8585-f4b8ca6bfd4a/chat',
+        route:'https://www.tiktok.com/@.r.2.p',
         image:'https://static.vecteezy.com/system/resources/previews/020/964/382/non_2x/tiktok-circle-icon-for-web-design-free-png.png',
     },
 ];

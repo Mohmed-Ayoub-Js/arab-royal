@@ -3,6 +3,14 @@ import MenuNavigation from "../MenuNavigation"
 import Logo from "../ui/Logo"
 import DiscordButton from "./DiscordButton"
 import Link from "next/link"
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 const Header = () => {
   return (
@@ -23,8 +31,36 @@ const Header = () => {
           <MenuNavigation />
         </div>
       </div>
-      <div className="md:hidden flex  justify-between flex-row p-2">
+      <div className="md:hidden flex items-center justify-between flex-row p-2">
         <Logo />
+        <div className="flex justify-center items-center flex-col">
+        <Sheet >
+  <SheetTrigger>Open</SheetTrigger>
+  <SheetContent side={"left"}>
+    <SheetHeader className="flex justify-center items-center flex-col w-full">
+      <SheetTitle>
+        <Logo />
+      </SheetTitle>
+      <SheetDescription className="flex justify-center items-center flex-col">
+      <div className="flex flex-col gap-5 items-center">
+          <div className="flex flex-col gap-5 items-center">
+            {social.map((item : any) => (
+              <div key={item.route}> 
+                <Link href={item.route}>
+                  <img src={item.image} alt="" width={40} height={40} className=" rounded-full transition hover:scale-105" />
+                </Link>
+              </div>
+            ))}
+          </div>
+          <DiscordButton title="الانضمام معنا في الديسكورد"/>
+          <MenuNavigation />
+        </div>
+      </SheetDescription>
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
+
+        </div>
       </div>
     </div>
   )
